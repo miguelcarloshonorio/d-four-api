@@ -1,27 +1,27 @@
-/*
- * -------------------------------------------------------
- * THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
- * -------------------------------------------------------
- */
+import { Field, ObjectType } from '@nestjs/graphql';
 
-/* tslint:disable */
-/* eslint-disable */
+@ObjectType()
 export class NewDevice {
-    id: string;
-    message: string;
+  @Field()
+  id: string;
+  @Field()
+  message: string;
 }
 
+@ObjectType()
 export class Device {
-    id: string;
-    message: string;
+  @Field()
+  id: string;
+  @Field()
+  message: string;
 }
 
 export abstract class IQuery {
-    abstract devices(): Device[] | Promise<Device[]>;
+  abstract devices(): Device[] | Promise<Device[]>;
 }
 
 export abstract class IMutation {
-    abstract sendFakeDevicePayload(input: NewDevice): Device | Promise<Device>;
+  abstract sendFakeDevicePayload(input: NewDevice): Device | Promise<Device>;
 }
 
 type Nullable<T> = T | null;
