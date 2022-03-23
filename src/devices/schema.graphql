@@ -1,0 +1,17 @@
+type Device {
+    id: ID!
+    message: String!
+}
+
+type Query{
+    devices:[Device!]!
+}
+
+input NewDevice {
+    id: ID!
+    message: String!
+}
+
+type Mutation{
+    sendFakeDevicePayload(input: NewDevice!): Device!
+}

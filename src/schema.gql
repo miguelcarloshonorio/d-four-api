@@ -1,0 +1,21 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Device {
+  id: String!
+  message: String!
+}
+
+type Query {
+  devices: [Device!]!
+}
+
+type Mutation {
+  sendFakeDevicePayload(input: DeviceDTO!): Device!
+}
+
+input DeviceDTO {
+  message: String!
+  id: String!
+}
