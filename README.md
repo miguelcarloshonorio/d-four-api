@@ -39,6 +39,30 @@ $ yarn test:cov
 ## Run locally
 http://localhost:3000/graphql
 
+### Mutation
+
+```
+mutation sendFakeDevicePayload {
+  sendFakeDevicePayload(input:{
+    id: "someID"
+    message:"some message"
+  }), {
+    id, message
+  }
+}
+```
+### Query
+```
+query devices {
+  devices {
+    id,
+    message
+  }
+}
+```
+
+
+
 ## Stay in touch
 
 - Author - [Miguel Carlos Honorio](https://github.com/miguelcarloshonorio)
